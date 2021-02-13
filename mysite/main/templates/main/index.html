@@ -1,9 +1,10 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Сигирия - Юридические услуги{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     <h1>Главная страница</h1>
+    <p>{{ values}} {{ value }}    </p>
     {% include 'main/test.html' %}
 
 {% endblock %}
