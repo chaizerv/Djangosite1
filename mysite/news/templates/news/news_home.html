@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+    <h1>Новости на сайте</h1>
+    <p>{{ values}} {{ value }}    </p>
+    {% include 'main/test.html' %}
+
+{% endblock %}

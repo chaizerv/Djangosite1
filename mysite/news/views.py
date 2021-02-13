@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import News
+
 
 def index(request):
-
-    return render(request, 'main/index.html')
+    return render(request, 'news/news_home.html')
 
