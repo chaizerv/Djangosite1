@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-widht">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'main/css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+<div id="rt-header">
+	<div class="rt-container">
+		<div class="rt-grid-4 rt-alpha">
+			<div class="rt-block">
+				<a href="{% url 'home' %}" id="rt-logo"><span style="color: black;display: block; padding-top: 54px;padding-left: 12px;">Юридические услуги</span></a>
+			</div>
+		</div>
+		<div class="rt-grid-8 rt-omega">
+			<div class="top_menu">
+				<div class="rt-block"><br>
+					<span style="font-size: 22px;">+7 (812) 923-78-10</span><br>
+					<span style="font-size: 22px;">+7 (911) 943-17-37</span><br>
+					<span style="font-size: 14px;float: right;">E-mail: sigiriya-spb@yandex.ru</span><br><br>
+					<span style="font-size: 14px;float: right;"><a href="callme.php"><img src="img/tlf2.gif" width="20" alt="">Закажите обратный звонок</a></span>
+					<div style="margin-top: 20px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <div id="menu1">
+        <ul id="menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="#">Услуги</a>
+                <ul>
+                    <li><a href="{% url 'egrul' %}">Заказать выписку из ЕГРЮЛ</a></li>
+                    <li><a href="{% url 'egrn' %}">Заказать выписку из ЕГРН</a></li>
+                    <li><a href="{% url 'i_egrul' %}">Внесение изменений</a></li>
+                    <li><a href="{% url 'document' %}">Восстановление документов</a></li>
+                    <li><a href="{% url 'ip' %}">Регистрация ИП</a></li>
+                    <li><a href="{% url 'ooo' %}">Регистрация ООО</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'spec' %}">Спецпредложения</a></li>
+            <li><a href="{% url 'contact' %}">Контакты</a></li>
+        </ul>
+    </div>
+<div class="pole">
+    <div class="news"><!--Новости-->
+        <p id="news_top">Новости</p>
+        <div class="garant"><img src="{% static 'main/img/gar.png' %}" alt="Гарантия низких цен"><br></div>
+        <p>Нашли услугу по более низкой цене? Мы снизим цену. Подробности по телефону 8 (812) 923-78-10</p>
+    </div>
+
+<div id="glavnaya">
+    {% block content %}
+    {% endblock %}
+</div>
+</div>
+
+
+
+</body>
+</html>
